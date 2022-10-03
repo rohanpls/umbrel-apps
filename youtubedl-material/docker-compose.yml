@@ -1,6 +1,11 @@
 version: "2"
 services:
-    ytdl_material:
+    app_proxy:
+    environment:
+      APP_HOST: $APP_YOUTUBEDL_IP
+      APP_PORT: $APP_YOUTUBEDL_PORT
+
+    server:
         environment: 
             ALLOW_CONFIG_MUTATIONS: 'true'
             ytdl_mongodb_connection_string: 'mongodb://ytdl-mongo-db:27017'
